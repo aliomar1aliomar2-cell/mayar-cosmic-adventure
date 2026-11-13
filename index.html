@@ -9,11 +9,11 @@
     <meta name="apple-mobile-web-app-title" content="Mayar" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="apple-touch-icon" sizes="180x180" href="game/apple-touch-icon-180.png" />
-    <link rel="apple-touch-icon" sizes="167x167" href="game/apple-touch-icon-167.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="game/apple-touch-icon-152.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="game/apple-touch-icon-120.png" />
-    <link rel="apple-touch-icon" href="game/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="apple-touch-icon-167.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <title>Mayar's Adventure</title>
     <meta property="og:title" content="Mayar's Adventure" />
     <meta property="og:description" content="A 15-stage platform adventure — jump the floating islands, collect star coins and reach the portal." />
@@ -67,7 +67,7 @@
         text-shadow: 0 0.08em 0 rgba(90, 50, 0, 0.9), 0 0 0.6em rgba(255, 200, 90, 0.7); }
       .hearts { display: flex; gap: 0.18em; margin-top: 0.18em; }
       .heart { position: relative; width: 2.75em; height: 2.75em; flex: none;
-        background: url("game/heart.png") center/contain no-repeat;
+        background: url("heart.png") center/contain no-repeat;
         filter: drop-shadow(0 0.12em 0.18em rgba(20, 0, 40, 0.65)); }
       .heart::after { content: ""; position: absolute; inset: 0; background: rgba(6, 2, 22, 0.85); border-radius: 0.4em;
         opacity: 0; transition: opacity 180ms ease; }
@@ -103,7 +103,7 @@
       .hud-right .stage img { width: 1.05em; height: 1.05em; }
       .icon-btn {
         pointer-events: auto; width: 4.2em; height: 4.2em; border: 0; padding: 0; flex: none;
-        background: url("game/btnCircle.png") center/100% 100% no-repeat; cursor: pointer;
+        background: url("btnCircle.png") center/100% 100% no-repeat; cursor: pointer;
         display: grid; place-items: center; transition: transform 90ms ease;
         filter: drop-shadow(0 0.22em 0.4em rgba(60, 20, 130, 0.8)) drop-shadow(0 0 0.5em rgba(160, 110, 255, 0.55));
       }
@@ -224,7 +224,7 @@
       .row { display: flex; gap: 0.6em; flex-wrap: wrap; justify-content: center; align-items: center; }
       .title-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.1em; }
       .title-wrap .kicker { font-size: 1.6em; letter-spacing: 0.32em; color: #bda6ff; font-weight: 700; text-transform: uppercase; }
-      .hero-art { width: 14em; height: 14em; background: url("game/mayar_idle.png") bottom center/contain no-repeat;
+      .hero-art { width: 14em; height: 14em; background: url("mayar_idle.png") bottom center/contain no-repeat;
         filter: drop-shadow(0 0.6em 1em rgba(0,0,0,0.5)); margin-bottom: -0.8em; }
       #levelGrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.55em; width: 56em; max-width: 100%; }
       .lvl {
@@ -315,7 +315,7 @@
 
       <div id="hud">
         <div class="hud-left">
-          <div class="portrait"><img src="game/portrait.png" alt="Mayar" /></div>
+          <div class="portrait"><img src="portrait.png" alt="Mayar" /></div>
           <div>
             <div class="hud-name">Mayar <span>ميار</span></div>
             <div class="hearts" id="hearts">
@@ -331,12 +331,12 @@
         </div>
 
         <div class="hud-center">
-          <div class="coin-box"><img src="game/coin.png" alt="" /><span id="coinCount">0</span></div>
-          <div class="logo"><img src="game/star.png" alt="" /><b>Mayar's Adventure</b></div>
+          <div class="coin-box"><img src="coin.png" alt="" /><span id="coinCount">0</span></div>
+          <div class="logo"><img src="star.png" alt="" /><b>Mayar's Adventure</b></div>
         </div>
 
         <div class="hud-right">
-          <div class="stage"><img src="game/star.png" alt="" /><span id="stageLabel">Stage 1 / 15</span></div>
+          <div class="stage"><img src="star.png" alt="" /><span id="stageLabel">Stage 1 / 15</span></div>
           <button class="icon-btn" id="pauseBtn" aria-label="Pause">
             <span class="pause-bars"><i></i><i></i></span>
           </button>
@@ -345,7 +345,7 @@
 
       <div id="controls">
         <button class="pad" id="padLeft" aria-label="Move left">
-          <img class="disc" src="game/btnCircle.png" alt="" />
+          <img class="disc" src="btnCircle.png" alt="" />
           <span class="ring"></span>
           <span class="glass"></span>
           <span class="spark" style="left:20%;top:12%"></span>
@@ -354,7 +354,7 @@
           <svg viewBox="0 0 100 100"><path d="M63 15 L25 50 L63 85" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <button class="pad" id="padRight" aria-label="Move right">
-          <img class="disc" src="game/btnCircle.png" alt="" />
+          <img class="disc" src="btnCircle.png" alt="" />
           <span class="ring"></span>
           <span class="glass"></span>
           <span class="spark" style="left:22%;top:16%"></span>
@@ -363,7 +363,7 @@
           <svg viewBox="0 0 100 100"><path d="M37 15 L75 50 L37 85" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <button class="pad" id="padJump" aria-label="Jump">
-          <img class="disc" src="game/btnCircle.png" alt="" />
+          <img class="disc" src="btnCircle.png" alt="" />
           <span class="ring"></span>
           <span class="glass"></span>
           <span class="spark" style="left:18%;top:22%"></span>
@@ -372,7 +372,7 @@
           <svg viewBox="0 0 100 100"><path d="M14 58 L50 22 L86 58" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 34 L50 84" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round"/></svg>
         </button>
         <button class="pad" id="padThrow" aria-label="Throw energy">
-          <img class="disc" src="game/btnCircle.png" alt="" />
+          <img class="disc" src="btnCircle.png" alt="" />
           <span class="ring"></span>
           <span class="glass"></span>
           <span class="spark" style="left:24%;top:14%"></span>
@@ -428,12 +428,12 @@
 
         <div class="panel" id="panel-shop">
           <h2 class="gold">Skills Shop</h2>
-          <div class="stat"><img src="game/coin.png" alt="" /><span id="shopCoins">0</span></div>
+          <div class="stat"><img src="coin.png" alt="" /><span id="shopCoins">0</span></div>
           <div class="shop-card ammo-card" id="ammoCard">
             <h3>Star Ammo <span class="maxed" id="ammoOwned">0 ★</span></h3>
             <p>Stars are the energy you throw at enemies. Each star costs 15 coins.</p>
             <div class="buy">
-              <span class="cost"><img src="game/coin.png" alt="" />15 / star</span>
+              <span class="cost"><img src="coin.png" alt="" />15 / star</span>
               <button id="buyStar1">+1 STAR</button>
               <button id="buyStar5">+5 · 75</button>
             </div>
@@ -456,10 +456,10 @@
         </div>
 
         <div class="panel" id="panel-complete">
-          <div class="praise"><img src="game/star.png" alt="" />شطوره ميمي!</div>
+          <div class="praise"><img src="star.png" alt="" />شطوره ميمي!</div>
           <h2 class="gold">Stage Clear</h2>
           <p id="completeText">You reached the portal.</p>
-          <div class="stat"><img src="game/coin.png" alt="" /><span id="completeCoins">0</span></div>
+          <div class="stat"><img src="coin.png" alt="" /><span id="completeCoins">0</span></div>
           <div id="completeMissions"></div>
           <div class="row">
             <button class="btn gold" id="btnNext">NEXT STAGE</button>
@@ -479,10 +479,10 @@
         </div>
 
         <div class="panel" id="panel-victory">
-          <div class="praise"><img src="game/star.png" alt="" />شطوره ميمي!</div>
+          <div class="praise"><img src="star.png" alt="" />شطوره ميمي!</div>
           <h2 class="gold">You Win!</h2>
           <p>All 15 stages are complete.</p>
-          <div class="stat"><img src="game/coin.png" alt="" /><span id="victoryCoins">0</span></div>
+          <div class="stat"><img src="coin.png" alt="" /><span id="victoryCoins">0</span></div>
           <div class="row">
             <button class="btn gold" id="btnAgain">PLAY AGAIN</button>
             <button class="btn alt" id="btnVictoryMenu">MAIN MENU</button>
