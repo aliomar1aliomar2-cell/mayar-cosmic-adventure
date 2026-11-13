@@ -1,5 +1,5 @@
 /* Mayar's Adventure — 15-stage canvas platformer.
-   All artwork is the supplied original art, loaded from ./game/*.png and drawn
+   All artwork is the supplied original art, loaded from ./*.png and drawn
    without recolouring, redrawing or regeneration.                                     */
 
 const VIEW = { w: 1280, h: 720 };
@@ -434,9 +434,9 @@ function syncSoundLabels() {
 
 /* -------------------------------------------------------------------- load -- */
 function loadAssets() {
-  const list = Object.entries(MAYAR).map(([k, v]) => [k, "game/" + v.file]);
-  ISL.forEach((m, i) => list.push(["isl" + i, "game/" + m.file]));
-  Object.entries(ART).forEach(([k, f]) => list.push([k, "game/" + f]));
+  const list = Object.entries(MAYAR).map(([k, v]) => [k, "" + v.file]);
+  ISL.forEach((m, i) => list.push(["isl" + i, "" + m.file]));
+  Object.entries(ART).forEach(([k, f]) => list.push([k, "" + f]));
 
   const total = list.length;
   let done = 0;
@@ -1268,7 +1268,7 @@ function renderShop() {
       (maxed
         ? '<button class="own" disabled>MAXED</button>'
         : '<button data-skill="' + s.id + '" ' + (can ? "" : "disabled") + ">" + (lv ? "UPGRADE" : "BUY") + "</button>" +
-          '<span class="cost"><img src="game/coin.png" alt="">' + cost + "</span>") +
+          '<span class="cost"><img src="coin.png" alt="">' + cost + "</span>") +
       "</div></div>";
   }).join("");
   list.querySelectorAll("button[data-skill]").forEach((b) => {
@@ -1387,64 +1387,4 @@ function wireUi() {
   el("missionChip").addEventListener("click", () => { Sound.ui(); openMissions(); });
   el("btnMissionsClose").addEventListener("click", () => { Sound.ui(); closeMissions(); });
   el("btnPauseMissions").addEventListener("click", () => { Sound.ui(); openMissions(); });
-  el("btnSound").addEventListener("click", () => { progress.sound = !progress.sound; saveProgressNow(); syncSoundLabels(); Sound.ui(); });
-  el("btnPauseSound").addEventListener("click", () => { progress.sound = !progress.sound; saveProgressNow(); syncSoundLabels(); Sound.ui(); });
-  el("btnFull").addEventListener("click", () => { Sound.ui(); goFullscreen(); });
-  el("pauseBtn").addEventListener("click", pauseGame);
-  el("btnResume").addEventListener("click", resumeGame);
-  el("btnRestart").addEventListener("click", () => { Sound.ui(); startLevel(state.level); });
-  el("btnMenu").addEventListener("click", () => { Sound.ui(); toMenu(); });
-  el("btnNext").addEventListener("click", () => { Sound.ui(); startLevel(Math.min(15, state.level + 1)); });
-  el("btnReplay").addEventListener("click", () => { Sound.ui(); startLevel(state.level); });
-  el("btnCompleteMenu").addEventListener("click", () => { Sound.ui(); toMenu(); });
-  el("btnRetry").addEventListener("click", () => { Sound.ui(); startLevel(state.level); });
-  el("btnGameoverLevels").addEventListener("click", () => { Sound.ui(); buildLevelGrid(); showPanel("levels"); state.mode = "levels"; });
-  el("btnGameoverMenu").addEventListener("click", () => { Sound.ui(); toMenu(); });
-  el("btnAgain").addEventListener("click", () => { Sound.ui(); startLevel(1); });
-  el("btnVictoryMenu").addEventListener("click", () => { Sound.ui(); toMenu(); });
-  window.addEventListener("resize", fit);
-  window.addEventListener("orientationchange", () => setTimeout(fit, 220));
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden && state.mode === "playing") pauseGame();
-  });
-  document.addEventListener("gesturestart", (e) => e.preventDefault());
-  document.addEventListener("touchmove", (e) => { if (e.cancelable) e.preventDefault(); }, { passive: false });
-}
-
-function toMenu() {
-  state.mode = "menu";
-  showPanel("menu");
-  el("hud").classList.remove("on");
-  buildLevelGrid();
-}
-
-async function boot() {
-  loadProgress();
-  syncSoundLabels();
-  fit();
-  wireUi();
-  bindPads();
-  throwBtnEl = el("padThrow");
-  loaderEl = document.createElement("div");
-  loaderEl.style.cssText = "position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:2.2em;color:#cbb8ff;font-weight:700;text-align:center;z-index:30";
-  loaderEl.textContent = "Loading 0%";
-  el("stage").appendChild(loaderEl);
-
-  const failed = await loadAssets();
-  loaderEl.remove();
-  if (failed.length) {
-    const errBox = el("err");
-    errBox.style.display = "block";
-    errBox.innerHTML = "Some artwork could not be loaded:<br><span style='font-size:0.7em;opacity:.8'>" +
-      failed.join("<br>") + "</span>";
-  }
-  state.levelData = LEVELS[0];
-  buildLevelGrid();
-  renderShop();
-  updateAmmo();
-  showPanel("menu");
-  window.__MAYAR__ = { state, progress, LEVELS, input, startLevel, completeLevel, saveProgressNow, SKILLS, buySkill, missionsFor };
-  requestAnimationFrame(frame);
-}
-
-boot();
+  el("btnSound").addEventListener("click", () => { progress.sound =
