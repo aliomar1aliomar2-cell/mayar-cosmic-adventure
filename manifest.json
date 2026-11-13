@@ -1,0 +1,249 @@
+{
+ "platforms": [
+  {
+   "file": "island0.png",
+   "w": 539,
+   "h": 308,
+   "surfY": 69,
+   "left": 58,
+   "right": 502,
+   "groundFrac": 0.82
+  },
+  {
+   "file": "island1.png",
+   "w": 541,
+   "h": 358,
+   "surfY": 78,
+   "left": 54,
+   "right": 508,
+   "groundFrac": 0.84
+  },
+  {
+   "file": "island2.png",
+   "w": 469,
+   "h": 353,
+   "surfY": 84,
+   "left": 80,
+   "right": 454,
+   "groundFrac": 0.8
+  },
+  {
+   "file": "island3.png",
+   "w": 329,
+   "h": 257,
+   "surfY": 58,
+   "left": 46,
+   "right": 302,
+   "groundFrac": 0.78
+  },
+  {
+   "file": "island4.png",
+   "w": 692,
+   "h": 241,
+   "surfY": 17,
+   "left": 74,
+   "right": 656,
+   "groundFrac": 0.84
+  },
+  {
+   "file": "island5.png",
+   "w": 277,
+   "h": 229,
+   "surfY": 33,
+   "left": 31,
+   "right": 230,
+   "groundFrac": 0.72
+  },
+  {
+   "file": "island6.png",
+   "w": 229,
+   "h": 196,
+   "surfY": 60,
+   "left": 22,
+   "right": 226,
+   "groundFrac": 0.89
+  },
+  {
+   "file": "island7.png",
+   "w": 161,
+   "h": 250,
+   "surfY": 9,
+   "left": 28,
+   "right": 148,
+   "groundFrac": 0.75
+  },
+  {
+   "file": "island8.png",
+   "w": 442,
+   "h": 259,
+   "surfY": 37,
+   "left": 31,
+   "right": 413,
+   "groundFrac": 0.86
+  },
+  {
+   "file": "island9.png",
+   "w": 373,
+   "h": 218,
+   "surfY": 3,
+   "left": 30,
+   "right": 355,
+   "groundFrac": 0.87
+  },
+  {
+   "file": "island10.png",
+   "w": 488,
+   "h": 324,
+   "surfY": 92,
+   "left": 61,
+   "right": 426,
+   "groundFrac": 0.75
+  }
+ ],
+ "sizes": {
+  "mayar_idle": [
+   278,
+   565
+  ],
+  "mayar_run1": [
+   214,
+   282
+  ],
+  "mayar_run2": [
+   212,
+   291
+  ],
+  "mayar_run3": [
+   209,
+   293
+  ],
+  "mayar_run4": [
+   200,
+   291
+  ],
+  "mayar_run5": [
+   212,
+   296
+  ],
+  "mayar_jumpRise": [
+   219,
+   271
+  ],
+  "mayar_jumpPeak": [
+   225,
+   304
+  ],
+  "mayar_jumpFall": [
+   234,
+   274
+  ],
+  "mayar_land1": [
+   238,
+   243
+  ],
+  "mayar_land2": [
+   251,
+   222
+  ],
+  "island0": [
+   543,
+   632
+  ],
+  "island1": [
+   541,
+   358
+  ],
+  "island2": [
+   469,
+   353
+  ],
+  "island3": [
+   329,
+   257
+  ],
+  "island4": [
+   692,
+   241
+  ],
+  "island5": [
+   277,
+   229
+  ],
+  "island6": [
+   229,
+   196
+  ],
+  "island7": [
+   161,
+   250
+  ],
+  "island8": [
+   442,
+   259
+  ],
+  "island9": [
+   373,
+   218
+  ],
+  "coin": [
+   64,
+   67
+  ],
+  "robot": [
+   91,
+   76
+  ],
+  "crawler": [
+   48,
+   53
+  ],
+  "ship": [
+   243,
+   133
+  ],
+  "rocket": [
+   167,
+   88
+  ],
+  "star": [
+   74,
+   71
+  ],
+  "hudHearts": [
+   184,
+   60
+  ],
+  "portrait": [
+   160,
+   159
+  ],
+  "btnCircle": [
+   122,
+   122
+  ],
+  "sky": [
+   668,
+   354
+  ],
+  "clouds": [
+   332,
+   149
+  ],
+  "planetEarth": [
+   139,
+   136
+  ],
+  "planetRed": [
+   126,
+   124
+  ],
+  "moon": [
+   63,
+   63
+  ],
+  "castle": [
+   335,
+   311
+  ]
+ }
+}
